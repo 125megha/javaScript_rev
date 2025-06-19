@@ -88,7 +88,7 @@ console.log(null>0)//false comparision 1st convert null into 0 then compare
 console.log(null==0)//not this it checks without converting so output is false
 console.log(null>=0)//true
 console.log("2"===2)//strict check with datatype check
-5 !== "5" // true ✅
+5 !== "5" // true ✅ strict inequality check
 5 === 5         // true  ✅ same value and same type (number)
 "5" === 5       // false ❌ same value but different types (string vs number)
 true === 1      // false ❌ boolean vs number
