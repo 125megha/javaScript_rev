@@ -12,7 +12,7 @@ console.log(myDate.toLocaleDateString());
 console.log(myDate.toLocaleString());
 // the above one to local string is very interesting property you can pass different parameter
 //1 st paremater is internationalization the customization
-console.log(myDate.toLocaleString('default',{weekday:long,}));//got to the midle parenthesis and click ctrl +space to know properties you can add maore than one properties
+console.log(myDate.toLocaleString('default'));//got to the midle parenthesis and click ctrl +space to know properties you can add maore than one properties
 /*respective output
 Sun Jul 14 2024 10:42:52 GMT+0000 (Coordinated Universal Time)
 Sun Jul 14 2024
