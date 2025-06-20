@@ -11,7 +11,7 @@ console.log(emp.name)
 console.log(emp["name"])// key should be in string for accsess
 ///note if the key in object is explictly is written in the double or single quotation then it is not possible to access by dot operator
 ///you can only access using square bracket
-//use f symbol with object
+//use  symbol with object
 const mysymbol=Symbol("key1")//decleration of symbol 
 //usin symbol as a key
 const emp2={name:"megha",age:18,location:"bhagalpur",email:"meghaverma@gmail.com",isloggedin:true,project:["a","b","c"],[mysymbol]:"2106125"}

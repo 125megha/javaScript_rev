@@ -36,12 +36,12 @@ if (true) {
     const username = "hitesh"
     if (username === "hitesh") {
         const website = " youtube"
-        // console.log(username + website);
+        console.log(username + website);
     }
-    // console.log(website);
+     console.log(website);
 }
 
-// console.log(username);
+console.log(username);
 
 
 add()//important this will not give error and can run before declearing
