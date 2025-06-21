@@ -43,7 +43,7 @@ if (true) {
 
 console.log(username);
 
-
+//concept of hoisting
 add()//important this will not give error and can run before declearing
 function add(num){
     return num+1

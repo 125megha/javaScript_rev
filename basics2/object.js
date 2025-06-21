@@ -52,11 +52,13 @@ const obj1 = {1: "a", 2: "b"}
 const obj2 = {3: "a", 4: "b"}
 const obj4 = {5: "a", 6: "b"}
 const obj3 = { obj1, obj2 }//two object inside obj3 it retruns object
-const obj7 = Object.assign({}, obj1, obj2, obj4)//it retruns object with concatinated value curly braces is optional as it is a ggod practice
+const obj7 = Object.assign( obj1, obj2, obj4)//it retruns object with concatinated value curly braces is optional as it is a ggod practice
 //you can add as manny object 
 //note if you will not give parenthesis then concatination is done at the Obj1
 //also then obj1 and obj7 is equal(===)
 console.log(obj7)
 const obj5= {...obj1, ...obj2}//spread operator 
 console.log(obj5);
+console.log(obj3);
+console.log(obj1) 
  

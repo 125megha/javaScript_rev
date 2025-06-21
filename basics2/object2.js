@@ -46,6 +46,8 @@ console.log(price)
 //     "price": "free"
 // }
 //json formatter is used to understand json data
+///can be in this format
+//you can use json formatter to understandjson data
 /*[
     {},
     {},
