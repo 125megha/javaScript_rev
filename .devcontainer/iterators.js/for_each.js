@@ -16,7 +16,30 @@ function print(val){
     console.log(val)
 }
 arr.forEach(print)// you just have to pass the reference
+forEach((val , index, arr)=>{console.log(val)
+    console.log(index)
+    console.log(arr)
+})
+// for getting each object from the object array
+const myCoding = [
+    {
+        languageName: "javascript",
+        languageFileName: "js"
+    },
+    {
+        languageName: "java",
+        languageFileName: "java"
+    },
+    {
+        languageName: "python",
+        languageFileName: "py"
+    },
+]
 
+myCoding.forEach( (item) => {
+    
+    console.log(item.languageName);
+} )
 
 
 
