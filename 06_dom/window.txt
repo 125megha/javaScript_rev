@@ -1,0 +1,247 @@
+// window is object or we can also say node
+node tree of html
+window-->document-->html-->head and body
+head--> title-->(text node) and--->meta (contains attribute charset)
+body-->div(...) 
+in browser console you can type and get the all window child node-->console.log(window)
+for document console.log(window.document) and also console.log(document)
+Sure Megha! Here's a **clean, note-style version** of all the functions you can do using `getElementById()` — perfect for taking notes 📒✨:
+
+---
+
+### 📌 `document.getElementById()` – Cheat Sheet
+
+**✅ Purpose:**
+Selects a single HTML element by its unique `id`.
+
+**🔹 Syntax:**
+
+```javascript
+let element = document.getElementById("yourId");
+```
+// to get class
+let element = document.getElementById("yourId").className;
+---
+
+### ✅ Common Functions with `getElementById`
+
+---
+
+#### 1️⃣ Change Text
+
+```javascript
+element.innerText = "New Text";         // Changes visible text
+element.textContent = "New Text";       // Similar, works for hidden content too
+```
+
+---
+
+#### 2️⃣ Change HTML Inside Element
+
+```javascript
+element.innerHTML = "<b>Bold Text</b>"; // Inserts HTML tags
+```
+
+---
+
+#### 3️⃣ Change CSS Style
+
+```javascript
+element.style.color = "red";
+element.style.backgroundColor = "lightblue";
+element.style.fontSize = "20px";
+element.style.display = "none";    // Hides element
+element.style.display = "block";   // Shows element
+```
+
+---
+
+#### 4️⃣ Read or Change Attributes
+
+```javascript
+let id = element.getAttribute("id");           // Get attribute
+element.setAttribute("class", "my-class");     // Set/change attribute
+```
+
+---
+
+#### 5️⃣ Add Event (like button click)
+
+```javascript
+element.addEventListener("click", function() {
+  alert("You clicked me!");
+});
+```
+
+---
+
+#### 6️⃣ Read Input Value
+
+```html
+<input type="text" id="myInput" />
+```
+
+```javascript
+let value = document.getElementById("myInput").value;
+```
+
+---
+
+### 🚫 Note:
+
+* Only works with **unique `id`**.
+* If the `id` doesn't exist, it returns `null`.
+
+---
+
+Would you like this in **PDF** format or in a **code file** to download and revise?
+// when you try to make two class className
+let element = document.getElementById("yourId").setAttribute('class',test,helping);
+------------------------------------------------------------------------------------------
+Sure Megha! Here's a complete list of **all the main ways to get HTML elements in JavaScript** — in a clean, note-style format for easy revision ✍️📚:
+
+---
+
+## 📘 Ways to Select HTML Elements in JavaScript
+
+### ✅ 1. `getElementById()`
+
+* **Use:** Select **one element** by its `id`
+* **Syntax:**
+
+```javascript
+let el = document.getElementById("myId");
+```
+
+---
+
+### ✅ 2. `getElementsByClassName()`
+
+* **Use:** Select **all elements** with a specific class (returns a live HTMLCollection)
+* **Syntax:**
+
+```javascript
+let items = document.getElementsByClassName("myClass");
+```
+
+---
+
+### ✅ 3. `getElementsByTagName()`
+
+* **Use:** Select all elements with a specific tag (like `div`, `p`, etc.)
+* **Syntax:**
+
+```javascript
+let divs = document.getElementsByTagName("div");
+```
+
+---
+
+### ✅ 4. `querySelector()`
+
+* **Use:** Select **first element** that matches a **CSS selector**
+* **Syntax:**
+
+```javascript
+let el = document.querySelector(".myClass");   // First element with class
+let el = document.querySelector("#myId");      // Element with id
+let el = document.querySelector("div > p");    // First matching selector
+let all = document.querySelectorAll('input'); // getting by tag
+```
+let all = document.querySelector('input[type="password"]');//getting by tag with specific attribute
+let all = document.querySelector('p:first-child'); // getting by tag with first child
+-------------------------------------------------------------------------
+html body
+<ul>
+<li>
+<li>
+<ul>
+----------------------- 
+you have to get li elemenet
+const el=document.querySelector('ul')
+const li =el.querySelector('li')
+li.style.backgroundColor="green"
+
+---------------------------------------------------------------------------
+
+### ✅ 5. `querySelectorAll()`
+
+* **Use:** Select **all elements** matching a CSS selector (returns a NodeList)
+* **Syntax:**
+
+```javascript
+let all = document.querySelectorAll(".myClass");
+```
+
+---
+
+### ✅ 6. `document.forms[]`
+
+* **Use:** Get forms in the document
+* **Syntax:**
+
+```javascript
+let form1 = document.forms[0];  // First form
+```
+
+---
+
+### ✅ 7. `document.images[]`
+
+* **Use:** Access all `<img>` elements
+* **Syntax:**
+
+```javascript
+let imgList = document.images;
+```
+
+---
+
+### ✅ 8. `document.links[]`
+
+* **Use:** Get all `<a>` tags with `href`
+* **Syntax:**
+
+```javascript
+let links = document.links;
+```
+
+---
+
+### ✅ 9. `parentElement` or `children`
+
+* **Use:** Navigate DOM tree
+
+```javascript
+let parent = el.parentElement;
+let child = el.children[0];
+```
+
+---
+
+## 🎯 Quick Summary Table:
+
+| Method                     | Returns                | Selector Type    |
+| -------------------------- | ---------------------- | ---------------- |
+| `getElementById()`         | Single element         | ID               |
+| `getElementsByClassName()` | HTMLCollection         | Class            |
+| `getElementsByTagName()`   | HTMLCollection         | Tag name         |
+| `querySelector()`          | First matching element | CSS selector     |
+| `querySelectorAll()`       | NodeList               | CSS selector     |
+| `document.forms[]`         | HTMLCollection         | Form elements    |
+| `document.images[]`        | HTMLCollection         | `<img>` elements |
+| `document.links[]`         | HTMLCollection         | `<a>` with href  |
+
+---
+
+Would you like me to make a **cheat sheet image** or **printable PDF** of this? 😊
+// note html collection is just like array not completely array its function and
+ properties you will get if you print any html collection in console of browser you will see the list
+ of properties and  function used with html collection
+  const el= document.querySelectorAll('li')// it will return node list which is different from html collection
+  el[0].style.backgroundColor="red" 
+  you can also convert the HTMLCollection into array
+  const htmlCollection = document.getElementsByClassName("item"); // HTMLCollection
+  const array = Array.from(htmlCollection);
+  const array = [...nodeList]; // or Array.from(nodeList)
+  console.log(array);    
