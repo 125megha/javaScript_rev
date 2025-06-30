@@ -51,4 +51,32 @@ arr2=["a","b","c"]
 console.log(arr1,arr2);
 //arr1 returns the reference of memory to arr2 and arr2 changes to that location
 //so the arr1 and arr2 both are refering to the same memory location and modification will affect both 
+/*parseInt() is a JavaScript function used to convert a string into an integer.
 
+✅ Syntax:
+javascript
+Copy
+Edit
+parseInt(string, radix);
+string: The value to convert (usually a string).
+
+radix (optional): The base of the number system (e.g., 10 for decimal, 2 for binary, 16 for hexadecimal).
+
+✅ Examples:
+javascript
+Copy
+Edit
+parseInt("123");        // → 123
+parseInt("123.45");     // → 123 (it only returns the whole number)
+parseInt("00123");      // → 123
+parseInt("10", 2);      // → 2 (binary "10" = decimal 2)
+parseInt("0xF");        // → 15 (hexadecimal)
+parseInt("abc123");     // → NaN (not a number)
+⚠️ Important Notes:
+It ignores whitespace at the beginning of the string.
+
+It stops parsing at the first non-numeric character.
+
+If the first character is not a number, it returns NaN.
+
+*/
