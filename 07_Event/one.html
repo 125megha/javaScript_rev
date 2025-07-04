@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // event as attribute not scalable or does not provide more features
+    //<li id="panda" onclick="alert("hiii")">panda</li>
+    //----------------------------------------
+    // this does not provide many feature
+    // document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked")
+    // }
+    //-------------------------------------------------
+      // these bellow also for events but not used now
+     // attachEvent()
+    // jQuery - on
+    //------------------------------
+    // these things you need to see little bit -------------------------
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+    //----------------------------------------------------
+    // addEventListner function
+    // --> it has three parameter two is mandatory to pass
+    //--> third is denotes event propogation by default false 
+    //--> false means bubble propogation(inside to outside)
+    //->ture means capture propogation(outside to inside)
+    // example of bubble propogation when you click cild element event of parent will also be fire after child
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // }, false)
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked");
+    //     e.stopPropagation()
+    // }, false)
+    //example of capture propogation when click child element 1st parent element event will fire after that child element event 
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // }, true)
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked");
+    //     e.stopPropagation()
+    // }, true)
+    
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();// to stop the default work like propogation to the google website
+    //     e.stopPropagation()// stop any fireing the event of parent element if i click child element 
+    //and parent element also has event listner
+    //     console.log("google clicked");
+    // }, false)
+   
+    // when when have not put the if condition then even if the clicking the list
+    //  element it get parent element ul and remove all the ul element
+    // so we applied if condition only when the click target is img then go to the parent element
+    //li and remove it
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+    
+        
+    })
+    // this is one more way to delete image 
+    // got the list to the parent of list ul and remove child with li referencce
+    //removeIt.parentNode.removeChild(removeIt)
+</script>
+</html>
